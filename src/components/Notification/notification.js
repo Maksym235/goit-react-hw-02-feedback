@@ -1,7 +1,9 @@
+import { Message } from './notification.styled';
+
 export default function Notification({ message }) {
   return (
     <div>
-      <p>{message}</p>
+      <Message>{message}</Message>
     </div>
   );
 }

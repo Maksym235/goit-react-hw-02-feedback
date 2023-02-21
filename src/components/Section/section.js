@@ -1,10 +1,11 @@
+import { SectionWrapper, SectionStyle, Title } from './section.styled';
 export default function Section({ title, children }) {
   return (
-    <div>
-      <div>
-        <p>{title}</p>
+    <SectionWrapper>
+      <SectionStyle>
+        <Title>{title}</Title>
         {children}
-      </div>
-    </div>
+      </SectionStyle>
+    </SectionWrapper>
   );
 }

@@ -1,14 +1,25 @@
 import React from 'react';
+import {
+  StatistictsWrapper,
+  Title,
+  GoodlItem,
+  NeutralItem,
+  BadItem,
+  TotalItem,
+  PercentageItem,
+} from './statistics.styled';
 
 export function Statistics({ stats: { good, neutral, bad }, total, percent }) {
   return (
-    <div>
-      <p>Statistics</p>
-      <p>Good: {good}</p>
-      <p>Neutral: {neutral}</p>
-      <p>Bad:{bad}</p>
-      <p>Total: {total}</p>
-      {!isNaN(percent) && <p>Positive Percentage: {percent}%</p>}
-    </div>
+    <StatistictsWrapper>
+      <Title>Statistics</Title>
+      <GoodlItem>Good: {good}</GoodlItem>
+      <NeutralItem>Neutral: {neutral}</NeutralItem>
+      <BadItem>Bad:{bad}</BadItem>
+      <TotalItem>Total: {total}</TotalItem>
+      {!isNaN(percent) && (
+        <PercentageItem>Positive Percentage: {percent}%</PercentageItem>
+      )}
+    </StatistictsWrapper>
   );
 }
