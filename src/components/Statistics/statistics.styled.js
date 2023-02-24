@@ -33,7 +33,3 @@ export const BadItem = styled(Item)`
 export const TotalItem = styled(Item)`
   color: #7e0cd6;
 `;
-export const PercentageItem = styled(Item)`
-  border: 2px solid black;
-  padding 5px;
-`;

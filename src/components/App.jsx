@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import FeedbackOptions from './FeedbackOptions/feedbackOptions';
-import Section from './Section/section';
-import { Statistics } from './Statistics/statistics';
-import Notification from './Notification/notification';
+import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
+import Section from './Section/Section';
+import { Statistics } from './Statistics/Statistics';
+import Notification from './Notification/Notification';
+import Persentage from './Percentage/Persentage';
 
 const options = [`Good`, `Neutral`, `Bad`];
 
@@ -42,7 +43,10 @@ class App extends Component {
         {total === 0 ? (
           <Notification message="There is no feedback" />
         ) : (
-          <Statistics stats={this.state} percent={percent} total={total} />
+          <>
+            <Statistics stats={this.state} total={total} />
+            <Persentage percent={percent} />
+          </>
         )}
       </Section>
     );

@@ -6,10 +6,9 @@ import {
   NeutralItem,
   BadItem,
   TotalItem,
-  PercentageItem,
-} from './statistics.styled';
+} from './Statistics.styled.js';
 
-export function Statistics({ stats: { good, neutral, bad }, total, percent }) {
+export function Statistics({ stats: { good, neutral, bad }, total }) {
   return (
     <StatistictsWrapper>
       <Title>Statistics</Title>
@@ -17,9 +16,6 @@ export function Statistics({ stats: { good, neutral, bad }, total, percent }) {
       <NeutralItem>Neutral: {neutral}</NeutralItem>
       <BadItem>Bad:{bad}</BadItem>
       <TotalItem>Total: {total}</TotalItem>
-      {!isNaN(percent) && (
-        <PercentageItem>Positive Percentage: {percent}%</PercentageItem>
-      )}
     </StatistictsWrapper>
   );
 }
